@@ -1,0 +1,16 @@
+[
+  {
+    "namespace": "searchIndex",
+    "description": "Access Thunderbird search index",
+    "functions": [
+      {
+        "name": "query",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          { "name": "details", "type": "object" }
+        ]
+      }
+    ]
+  }
+]
