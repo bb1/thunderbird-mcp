@@ -1,0 +1,14 @@
+[
+  {
+    "namespace": "calendarMcp",
+    "description": "Manage Thunderbird calendar",
+    "functions": [
+      {
+        "name": "listCalendars",
+        "type": "function",
+        "async": true,
+        "parameters": []
+      }
+    ]
+  }
+]
