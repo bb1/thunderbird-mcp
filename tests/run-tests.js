@@ -1,9 +1,11 @@
 import { spawn } from 'child_process';
-import { setTimeout as delay } from 'timers/promises';
+
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const tbPath = process.env.TB_PATH || 'thb/thunderbird';
 
-const webExt = spawn('web-ext', [
+const webExt = spawn('npx', [
+  'web-ext',
   'run',
   '--firefox', tbPath,
   '--source-dir', 'extension',
@@ -11,7 +13,7 @@ const webExt = spawn('web-ext', [
   '--verbose',
   '--pref=extensions.experiments.enabled=true',
   '--args=--headless'
-]);
+], { stdio: 'inherit' });
 
 let done = false;
 

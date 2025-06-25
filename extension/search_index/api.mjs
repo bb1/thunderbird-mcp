@@ -14,6 +14,7 @@ class API extends ExtensionCommon.ExtensionAPI {
             return collection.items.map(m => ({
               id: m.headerMessageID,
               subject: m.subject,
+              from: m.from,
               folder: m.folder.URI,
             }));
           } catch (e) {

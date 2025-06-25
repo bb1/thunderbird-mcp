@@ -1,4 +1,6 @@
 /* global messenger */
+// `messenger` is provided by Thunderbird's WebExtensions environment. The
+// custom APIs registered in manifest.json appear under this object.
 const { HttpServer } = ChromeUtils.import("resource://testing-common/httpd.js");
 const { NetUtil } = ChromeUtils.import("resource://gre/modules/NetUtil.jsm");
 

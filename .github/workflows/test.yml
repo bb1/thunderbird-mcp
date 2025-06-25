@@ -12,9 +12,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-      - name: Install web-ext
-        run: npm install -g web-ext
+          node-version: '22'
+      - run: npm ci
       - name: Download Thunderbird
         run: |
           curl -L -o thunderbird.tar.xz "https://download.mozilla.org/?product=thunderbird-latest&os=linux64&lang=en-US"

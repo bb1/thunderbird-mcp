@@ -24,7 +24,13 @@ extension/
 ```
 
 The experimental APIs integrate with Thunderbird's search index and calendar
-services and are usable from other scripts via the MCP server.
+services and are usable from other scripts via the MCP server. They enable the
+following MCP tools:
+
+- `searchMessages` – search the message index
+- `sendMail` – compose and dispatch a mail
+- `listCalendars` – list available calendars
+- `searchContacts` – look up contacts the user interacted with
 
 ## Loading the extension in Thunderbird
 
@@ -36,3 +42,15 @@ services and are usable from other scripts via the MCP server.
    - `tools/call` invokes one of the tools with arguments
 
 The extension requires Thunderbird 102 or later.
+
+## Running tests
+
+The repository includes a small test runner. After installing
+development dependencies, run:
+
+```bash
+npm test
+```
+
+The script downloads Thunderbird, launches the extension in headless mode
+using `web-ext`, and checks that the MCP server responds to `tools/list`.
