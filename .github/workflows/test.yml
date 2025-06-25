@@ -17,8 +17,8 @@ jobs:
         run: npm install -g web-ext
       - name: Download Thunderbird
         run: |
-          curl -L -o thunderbird.tar.bz2 "https://download.mozilla.org/?product=thunderbird-latest&os=linux64&lang=en-US"
-          tar xjf thunderbird.tar.bz2
+          curl -L -o thunderbird.tar.xz "https://download.mozilla.org/?product=thunderbird-latest&os=linux64&lang=en-US"
+          tar xJf thunderbird.tar.xz
           mv thunderbird/ thb
       - name: Run tests
         env:
