@@ -12,16 +12,15 @@ MCP stands for **Model Context Protocol**; see <https://modelcontextprotocol.io/
 extension/
 ├── background.js        - Starts the MCP server
 ├── manifest.json        - Extension manifest
-└── experiments/
-    ├── search_index/
-    │   ├── api.js
-    │   └── schema.json
-    ├── calendar/
-    │   ├── api.js
-    │   └── schema.json
-    └── contacts/
-        ├── api.js
-        └── schema.json
+├── search_index/
+│   ├── api.mjs
+│   └── schema.json
+├── calendar/
+│   ├── api.mjs
+│   └── schema.json
+└── contacts/
+    ├── api.mjs
+    └── schema.json
 ```
 
 The experimental APIs integrate with Thunderbird's search index and calendar

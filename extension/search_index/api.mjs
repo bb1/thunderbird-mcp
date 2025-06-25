@@ -26,4 +26,4 @@ class API extends ExtensionCommon.ExtensionAPI {
   }
 }
 
-this.API = API;
+export default API;

@@ -1,7 +1,7 @@
 import { spawn } from 'child_process';
 import { setTimeout as delay } from 'timers/promises';
 
-const tbPath = process.env.TB_PATH || 'thunderbird/thunderbird';
+const tbPath = process.env.TB_PATH || 'thb/thunderbird';
 
 const webExt = spawn('web-ext', [
   'run',
@@ -9,6 +9,7 @@ const webExt = spawn('web-ext', [
   '--source-dir', 'extension',
   '--no-input',
   '--verbose',
+  '--pref=extensions.experiments.enabled=true',
   '--args=--headless'
 ]);
 
