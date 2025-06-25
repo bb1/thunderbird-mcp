@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install web-ext
+        run: npm install -g web-ext
+      - name: Download Thunderbird
+        run: |
+          curl -L -o thunderbird.tar.bz2 "https://download.mozilla.org/?product=thunderbird-latest&os=linux64&lang=en-US"
+          tar xjf thunderbird.tar.bz2
+          mv thunderbird/ thb
+      - name: Run tests
+        env:
+          TB_PATH: thb/thunderbird
+        run: npm test
