@@ -1,3 +1,8 @@
+--
+**WARNING! This project is no longer maintained.**
+Use the spiritual successcor https://github.com/TKasperczyk/thunderbird-mcp by @TKasperczyk
+--
+
 # thunderbird-mcp
 
 This repository contains a Thunderbird extension that exposes experimental APIs for
